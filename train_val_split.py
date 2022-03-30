@@ -1,6 +1,7 @@
 # delete the UECFOOD100 folder first (if present)
 # %rm -rf /content/UECFOOD100
 # code for spliting both images and labels for training and validation
+
 import os
 import glob
 import shutil
