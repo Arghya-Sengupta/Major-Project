@@ -3,27 +3,27 @@
 import os
 from PIL import Image
 
-# modify the directories and class file to fit
-datapath = '/UECFOOD100'
-labelpath = '/UECFOOD100/labels/'
-classfilename = '/content/food100.names'
+# modify the directories accordingly
+datapath = '/content/sample_data'
+labelpath = '/content/sample_data/labels/'
+classfilename = '/content/drive/MyDrive/Data/food100.names'
 
 def convert_yolo_bbox(img_size, box):
-    # img_bbox file is [0:img] [1:left X] [2:bottom Y] [3:right X] [4:top Y]
+    # img_bbox file format is [0:img] [1:left X] [2:bottom Y] [3:right X] [4:top Y]
     dw = 1./img_size[0]
     dh = 1./img_size[1]
     x = (int(box[1]) + int(box[3]))/2.0
     y = (int(box[2]) + int(box[4]))/2.0
     w = abs(int(box[3]) - int(box[1]))
     h = abs(int(box[4]) - int(box[2]))
-    x = x*dw
-    w = w*dw
-    y = y*dh
-    h = h*dh
-    # Yolo bbox is center x, y and width, height
+    x *= dw
+    w *= dw
+    y *= dh
+    h *= dh
+    # yolo_bbox file format is center x, y and width, height
     return (x,y,w,h)
 
-def generate_bbox_file(datapath, labelpath, classid, classname):
+def generate_bbox_file(classid):
     dataDir = os.path.join(datapath, str(classid))
     labelDir = os.path.join(labelpath, str(classid))
     bb_filename = os.path.join(dataDir, 'bb_info.txt')
@@ -34,14 +34,6 @@ def generate_bbox_file(datapath, labelpath, classid, classname):
             # img_bbox file is [0:img] [1:left X] [2:bottom Y] [3:right X] [4:top Y]
             img_bbox = line.strip('\n').split(' ')
             if img_bbox[0] != 'img':
-                img_bbox_filename = os.path.join(dataDir, img_bbox[0]+'.txt')
-                with open(img_bbox_filename, 'w') as f:
-                    # [number of bbox]
-                    # [left X] [top Y] [right X] [bottom Y] [class name]
-                    f.write('1\n')
-                    f.write('%s %s %s %s %s\n' %(img_bbox[1], img_bbox[4], img_bbox[3], img_bbox[2], classname))
-                    f.close()
-
                 image_filename = os.path.join(dataDir, img_bbox[0]+'.jpg')
                 yolo_label_filename = os.path.join(labelDir, img_bbox[0]+'.txt')
                 with open(yolo_label_filename, 'w') as f:
@@ -65,5 +57,5 @@ if os.path.exists(classfilename):
 
 for id in classid2name.keys():
     print("generating %d %s" %(id, classid2name[id]))
-    generate_bbox_file(datapath, labelpath, id, classid2name[id])
+    generate_bbox_file(id)
 print('Completed')
