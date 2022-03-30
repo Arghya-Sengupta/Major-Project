@@ -17,7 +17,7 @@ def make_directories():
 	os.makedirs('/content/UECFOOD100/labels/train')
 	os.mkdir('/content/UECFOOD100/labels/val')
 
-def copy_files(probability):
+def split_files(probability):
 	for i in range(1,nc+1):
 		new_dir = directory + str(i) + '/'
 		for f in listdir(new_dir):
@@ -39,4 +39,4 @@ def copy_files(probability):
 					shutil.copy2(label_src, label_dst)
 
 make_directories()
-copy_files(70)	# 70% for training and 30% for validation
+split_files(70)	# 70% for training and 30% for validation
