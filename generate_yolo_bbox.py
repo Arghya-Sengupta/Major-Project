@@ -1,4 +1,4 @@
-#code for modifying the bounding boxes in yolo format
+# code for modifying the bounding boxes in yolo format
 
 import os
 from PIL import Image
