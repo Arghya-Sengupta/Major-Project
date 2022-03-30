@@ -1,0 +1,6 @@
+# modify the directories accordingly
+train: /content/UECFOOD100/images/train/
+val: /content/UECFOOD100/images/val/
+
+nc: 1
+names: ['rice']
