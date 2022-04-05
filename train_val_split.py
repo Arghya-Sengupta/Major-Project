@@ -42,8 +42,8 @@ def split_files(probability):
 
 				shutil.copy2(imgage_src, imgage_dst)
 				shutil.copy2(label_src, label_dst)
-	print(t,"Images for training")
-	print(v,"Images for validation")
+	print(str(t) + " (" + str(100.0*t/(t+v)) + " %) Images for training")
+	print(str(v) + " (" + str(100.0*v/(t+v)) + " %) Images for validation")
 
 make_directories()
 split_files(70)	# 70% for training and 30% for validation
