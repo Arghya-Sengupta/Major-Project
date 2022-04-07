@@ -5,7 +5,7 @@ https://colab.research.google.com/github/Arghya-Sengupta/Major-Project/blob/main
 Download the Dateset from here - 
 https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
 
-Kindly Update the Google Sheet - https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing
+Google Sheet for Training Accuracy - https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing
 
 python D:/Project/yolov5/train.py --img 240 --batch 2 --epochs 3 --data D:/Project/yolov5/data/custom_coco.yaml --weights yolov5s.pt --cache
 
