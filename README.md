@@ -7,7 +7,7 @@
 > http://foodcam.mobi/dataset100.html
 
 
-**Download the folders marked in _GREEN_**
+**Download the folders colored _GREEN_**
 > https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
 > 
 > Paste these under ***D:/Project/***
