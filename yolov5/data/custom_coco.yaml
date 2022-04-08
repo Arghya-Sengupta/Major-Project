@@ -1,6 +1,0 @@
-# modify the directories accordingly
-train: D:/Project/Training_Images/images/train/
-val: D:/Project/Training_Images/images/val/
-
-nc: 5
-names: ['rice','toast','omelet','fish','salad']
