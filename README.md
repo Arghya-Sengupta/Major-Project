@@ -3,9 +3,9 @@
 
 [Original Dataset](http://foodcam.mobi/dataset100.html)
 
-[Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
-
 [YOLOv5 Documentation](https://docs.ultralytics.com/)
+
+[Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
 
 **Download the folders colored _GREEN_**
 > https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
