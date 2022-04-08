@@ -2,7 +2,7 @@
 Google Colab - 
 https://colab.research.google.com/github/Arghya-Sengupta/Major-Project/blob/main/YOLOv5.ipynb
 
-Download the Dateset from here - 
+Download the Data from here - 
 https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
 
 Google Sheet for Training Accuracy - https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing
