@@ -1,4 +1,4 @@
-# Food Image Recognition and Calorie Estimation
+# Estimating Food Calories for Multiple-dish Food Photos using YOLOv5
 [Google Colab](https://colab.research.google.com/github/Arghya-Sengupta/Major-Project/blob/main/YOLOv5.ipynb)
 
 [Original Dataset](http://foodcam.mobi/dataset100.html)
