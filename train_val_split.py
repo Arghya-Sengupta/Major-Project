@@ -10,7 +10,7 @@ from random import randint
 from os import listdir
 
 directory = 'D:/Project/Original_Images/'
-nc = 3	# number of catagories
+nc = 5	# number of catagories
 
 def make_directories():
 	os.makedirs('D:/Project/Training_Images/images/train')
