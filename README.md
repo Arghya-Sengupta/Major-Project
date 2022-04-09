@@ -1,21 +1,21 @@
 # Estimating Food Calories for Multiple-dish Food Photos using YOLOv5
-[Google Colab](https://colab.research.google.com/github/Arghya-Sengupta/Major-Project/blob/main/YOLOv5.ipynb)
+YOLO(You Only Look Once), is an object detection algorithm that divides images into a grid system. Each cell in the grid is responsible for detecting objects within itself. YOLO is one of the most famous object detection algorithms due to its speed and accuracy. [Glenn Jocher](https://www.linkedin.com/in/glenn-jocher) introduced YOLOv5 using the Pytorch framework. We have referred to the [YOLOv5 documentation](https://docs.ultralytics.com) for training and testing.
 
-[Original Dataset](http://foodcam.mobi/dataset100.html)
+- [Google Colab](https://colab.research.google.com/github/Arghya-Sengupta/Major-Project/blob/main/YOLOv5.ipynb)
 
-[YOLOv5 Documentation](https://docs.ultralytics.com/)
+- [Original Dataset](http://foodcam.mobi/dataset100.html)
 
-[Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
+- [Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
 
-[Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
+- [Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
 
-**Download the folders named `Training_Images` & `yolov5`**
-> https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
-> 
-> Paste these under ***`D:/Project/`***
+- **Download the folders named `Training_Images` & `yolov5`**
+   > https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
+   > 
+   > Paste these under ***`D:/Project/`***
 
-**For Training**
-> *python D:/Project/yolov5/train.py --batch 2 --epochs 1 --data D:/Project/yolov5/data/custom_coco.yaml --weights yolov5s.pt --cache*
+- **For Training run the following code**
+   > *python D:/Project/yolov5/train.py --batch 2 --epochs 1 --data D:/Project/yolov5/data/custom_coco.yaml --weights yolov5s.pt --cache*
 
-**For Detection**
-> *python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp........./weights/best.pt --conf 0.1 --source D:/Project/test.jpg*
+- **For Detection run the following code**
+   > *python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp........./weights/best.pt --conf 0.1 --source D:/Project/test.jpg*
