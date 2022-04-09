@@ -22,6 +22,7 @@ def split_files(probability):
 	t=0
 	v=0
 	for i in range(1,nc+1):
+		print("Working on "+str(i))
 		new_dir = directory + str(i) + '/'
 		for f in listdir(new_dir):
 			if isfile(join(new_dir, f)) and f.endswith((".jpg", ".jpeg", ".png")):
