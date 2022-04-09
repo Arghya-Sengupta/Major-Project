@@ -21,4 +21,4 @@ YOLO(You Only Look Once) is an object detection algorithm that divides images in
    > *python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp........./weights/best.pt --conf 0.1 --source D:/Project/test.jpg*
 
 ## Folder structure
-![Folder structure](https://embed.creately.com/m48ilr2OFDs "Made using Creately")
+![Folder structure]( "Made using Creately")
