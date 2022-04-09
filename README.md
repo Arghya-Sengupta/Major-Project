@@ -7,7 +7,7 @@ YOLO(You Only Look Once), is an object detection algorithm that divides images i
 
 - [Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
 
-- [Google Sheet](https://embed.creately.com/m48hilr2OFDs"Made using Creately") for Training Accuracy
+- [Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
 
 - **Download the folders named `Training_Images` & `yolov5`**
    > https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing
@@ -20,5 +20,5 @@ YOLO(You Only Look Once), is an object detection algorithm that divides images i
 - **For Detection run the following code**
    > *python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp........./weights/best.pt --conf 0.1 --source D:/Project/test.jpg*
 
-# Folder structure
-![Folder structure](https://embed.creately.com/m48ilr2OFDs)
+## Folder structure
+![Folder structure](https://embed.creately.com/m48ilr2OFDs "Made using Creately")
