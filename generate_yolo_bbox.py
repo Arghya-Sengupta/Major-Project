@@ -6,7 +6,7 @@ from PIL import Image
 # modify the directories accordingly
 datapath = 'D:/Project/Original_Images'
 labelpath = 'D:/Project/Original_Images/labels/'
-classfilename = 'D:/Project/foods.names'
+nc = 5
 
 def convert_yolo_bbox(img_size, box):
     # img_bbox file format is [0:img] [1:left X] [2:bottom Y] [3:right X] [4:top Y]
@@ -46,16 +46,7 @@ def generate_bbox_file(classid):
                     f.close()
         fp.close()
 
-classid = 0
-classid2name = {}
-if os.path.exists(classfilename):
-    with open(classfilename) as cf:
-        for line in cf.readlines():
-            classname = line.strip('\n')
-            classid = classid + 1
-            classid2name[classid] = classname
-
-for id in classid2name.keys():
-    print("generating %d %s" %(id, classid2name[id]))
-    generate_bbox_file(id)
+for i in range(1,nc+1):
+    print("Working on "+str(i))
+    generate_bbox_file(i)
 print('Completed')
