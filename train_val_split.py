@@ -3,7 +3,6 @@
 # code for spliting both images and labels for training and validation
 
 import os
-import glob
 import shutil
 from os.path import isfile, join
 from random import randint
