@@ -1,5 +1,5 @@
 # delete the folder first (if present)
-# %rm -rf /content/Training_Images
+# %rm -rf D:/Project/Training_Images
 # code for spliting both images and labels for training and validation
 
 import os
