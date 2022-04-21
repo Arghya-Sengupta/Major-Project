@@ -3,7 +3,7 @@
 import os
 import time
 
-path = "/content/drive/MyDrive/Data/" # D:/Project
+path = "D:/Project" # "/content/drive/MyDrive/Data/"
 images_path = path +  "Detection_Images/"
 results_path = path + "Results/"
 N = len(os.listdir(images_path))
@@ -13,8 +13,8 @@ if not os.path.exists(results_path):
 	os.mkdir(results_path)
 
 for test_file in os.listdir(images_path):
-	prog_path = "/content/yolov5/custom_detect.py"
-	weight_file = "/content/yolov5/runs/exp2/weights/best.pt"
+	prog_path = "D:/Project/yolov5/custom_detect.py"
+	weight_file = "D:/Project/yolov5/runs/exp.................../weights/best.pt"
 	test_file = images_path + test_file
 
 	command = "python " + prog_path + " --weights " + weight_file + " --conf 0.5 --source " + test_file
