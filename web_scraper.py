@@ -3,16 +3,23 @@
 import requests
 from bs4 import BeautifulSoup
 
+url = 'https://www.myfitnesspal.com/food/search?page=1&search='
+
 def fetch_calories(food_name):
     try:
-        url = 'https://www.myfitnesspal.com/food/search?page=1&search=' + food_name
-        req = requests.get(url).text
+        search = url + food_name
+        req = requests.get(search).text
         scrap = BeautifulSoup(req, 'html.parser')
-        calories = scrap.find("div", class_="label-1frn-").text
+
+        class_name = "label-1frn-"
+        calories = scrap.find("div", class_=class_name).text
+
         return calories
+
     except Exception as e:
-        print("Unable to fetch the Calories of",food_name)
-        # print(e)
+        print(f"Unable to fetch the Calories of {food_name}")
+        print(e)
+
 
 # Testing
 
