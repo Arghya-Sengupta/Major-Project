@@ -46,7 +46,10 @@ def generate_bbox_file(classid):
                     f.close()
         fp.close()
 
-for i in range(1,nc+1):
-    print("Working on "+str(i))
-    generate_bbox_file(i)
-print('Completed')
+def create_labels():
+    for i in range(1,nc+1):
+        print("Working on "+str(i))
+        generate_bbox_file(i)
+    print('Completed')
+
+create_labels()
