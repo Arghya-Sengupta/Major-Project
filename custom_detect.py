@@ -5,10 +5,10 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
-directory = "/content/drive/MyDrive/Data/" # "D:/Project/"
+directory = "D:/Project/"
 foods_found = []
 total_calories = 0
-save_result = False
+save_result = True
 
 
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
@@ -223,12 +223,12 @@ def run(
 
                     img = Image.open(save_path)
                     I1 = ImageDraw.Draw(img)
-                    myFont = ImageFont.truetype(r'/content/arial.ttf',40) # "D:/Project/"
+                    myFont = ImageFont.truetype(r'D:/Project/arial.ttf',40)
                     # Add Text to an image
                     total_calories = str(total_calories) + " kcal"
                     I1.text((0, 0), total_calories, font=myFont, fill =(255, 0, 0))
                     if(save_result):
-                        img.save(results_path)
+                        img.save("D:/Project/Result/result.jpg") # results_path
 
                 else:  # 'video' or 'stream'
                     if vid_path[i] != save_path:  # new video
@@ -301,7 +301,7 @@ if __name__ == "__main__":
     opt = parse_opt()
     main(opt)
 
-f = open("/content/result.txt", "w") # "D:/Project/"
+f = open("D:/Project/result.txt", "w")
 for food in foods_found:
    f.write(food + "\n")
 f.close()
