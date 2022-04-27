@@ -12,7 +12,7 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
 - [Zenodo](https://zenodo.org/record/6222936#.YlaVKfpBzIU)
 
 - **Paste the above codes under _`D:/Project/`_**
-   > Download the **`Training_Images`** folder from [here](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
+   > Download the Images from [Google Drive](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
    > 
    > Clone the YOLOv5 repo `git clone https://github.com/ultralytics/yolov5`
 
