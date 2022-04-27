@@ -3,30 +3,31 @@
 import os
 import time
 
-path = "D:/Project" # "/content/drive/MyDrive/Data/"
-images_path = path +  "Detection_Images/"
+path = "D:/Project/"
+images_path = path +  "Testing_Images/"
 results_path = path + "Results/"
+weight_file = path + "/yolov5/runs/train/exp/weights/best.pt"
 N = len(os.listdir(images_path))
 start = time.time()
 
-if not os.path.exists(results_path):
-	os.mkdir(results_path)
-
-for test_file in os.listdir(images_path):
-	prog_path = "D:/Project/yolov5/custom_detect.py"
-	weight_file = "D:/Project/yolov5/runs/exp.................../weights/best.pt"
-	test_file = images_path + test_file
-
-	command = "python " + prog_path + " --weights " + weight_file + " --conf 0.5 --source " + test_file
-	print("Detecting",test_file)
+def detect_file(file_name):
+	prog_path = path + "/yolov5/custom_detect.py"
+	file_name = images_path + file_name
+	command = "python " + prog_path + " --weights " + weight_file + " --conf 0.3 --source " + file_name
+	print("Detecting",file_name)
 
 	try:
 		status = os.system(command) # executing the command in cmd
 	except Exception as e:
 	    print("Error while executing custom_detect.py")
 	    print(e)
-
 	if(status != 0):
-		print(test_file,"not found")
+		print(file_name,"not found")
+
+if not os.path.exists(results_path):
+	os.mkdir(results_path)
+
+for test_file in os.listdir(images_path):
+	detect_file(test_file)
 
 print(f"Detection Completed in {round(time.time()-start, 2)}s")
