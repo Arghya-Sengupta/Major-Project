@@ -9,8 +9,6 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
 
 - [Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
 
-- [Zenodo](https://zenodo.org/record/6222936#.YlaVKfpBzIU)
-
 - **Paste the above codes under _`D:/Project/`_**
    > Download the Images from [Google Drive](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
    > 
