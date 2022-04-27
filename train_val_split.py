@@ -18,6 +18,7 @@ def make_directories():
 	os.mkdir('D:/Project/Training_Images/labels/val')
 
 def split_files(probability):
+	make_directories()
 	t=0
 	v=0
 	for i in range(1,nc+1):
@@ -45,5 +46,4 @@ def split_files(probability):
 	print(str(t) + " (" + str(100.0*t/(t+v)) + " %) Images for training")
 	print(str(v) + " (" + str(100.0*v/(t+v)) + " %) Images for validation")
 
-make_directories()
-split_files(70)	# 70% for training and 30% for validation
+split_files(70) # 70% for training and 30% for validation
