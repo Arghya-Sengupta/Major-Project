@@ -9,16 +9,20 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
 
 - [Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
 
-- **Paste the above codes under _`D:/Project/`_**
-   > Download the Images from [Google Drive](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
+- **Steps to execute the code:**
+   > ```
+   > d:
+   > git clone https://github.com/Arghya-Sengupta/Project
+   > cd Project
+   > cd yolov5
+   > git init
+   > git remote add origin https://github.com/ultralytics/yolov5
+   > git fetch
+   > git checkout origin/master -ft
+   > git pull
    > 
-   > Clone the YOLOv5 repo `git clone https://github.com/ultralytics/yolov5`
-
-- **For Training run the following code**
-   > *python D:/Project/yolov5/train.py --batch 2 --epochs 1 --data D:/Project/yolov5/data/custom_coco.yaml --weights yolov5s.pt --cache*
-
-- **For Detection run the following code**
-   > *python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp........./weights/best.pt --conf 0.3 --source D:/Project/test.jpg*
+   > ```
+   > Download the _`Original_Images`_ folder from [Google Drive](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
 
 ## Flowchart
 ![Flowchart](https://github.com/Arghya-Sengupta/Major-Project/blob/main/Flowchart.png "Flowchart")
