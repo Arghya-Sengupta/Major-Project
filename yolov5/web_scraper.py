@@ -1,20 +1,28 @@
 # fetch food calorie from https://www.myfitnesspal.com/food/search
+# fetch food calorie from https://www.fatsecret.com/calories-nutrition/search?q=
 
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://www.myfitnesspal.com/food/search?page=1&search='
+url = 'https://www.fatsecret.com/calories-nutrition/search?q='
+
+def search_in_text(arr, text):
+    for i in range(0,len(arr)):
+        if(arr[i].lower().strip() == text.lower().strip()):
+            return i
+    return -1
 
 def fetch_calories(food_name):
     try:
-        search = url + food_name
-        req = requests.get(search).text
+        s = url + food_name
+        req = requests.get(s).text
         scrap = BeautifulSoup(req, 'html.parser')
 
-        class_name = "label-1frn-"
-        calories = scrap.find("div", class_=class_name).text
-
-        return calories
+        class_name = "smallText greyText greyLink"
+        text = scrap.find("div", class_=class_name).text
+        arr = text.split(" ")
+        i = search_in_text(arr,"Calories:")
+        return arr[i+1]
 
     except Exception as e:
         print(f"Unable to fetch the Calories of {food_name}")
@@ -23,17 +31,18 @@ def fetch_calories(food_name):
 
 # Testing
 
-# foods = ['rice','toast','16443543','omelet','fish','salad','banana']
+# foods = ['rice','toast','omelet','fish','salad','banana']
 # for food_name in foods:
 #     calories = fetch_calories(food_name)
-#     if((calories is not None) and calories.isnumeric()):
-#         print(f"{food_name} has {calories} kcal per 100gm")
+#     print(food_name + " has " + calories)
 
 
-# url = 'https://www.myfitnesspal.com/food/search?page=1&search=' + 'rice'
-# req = requests.get(url).text
-# print(req)
+# s = url + 'omelet'
+# req = requests.get(s).text
+# # print(req)
 
 # scrap = BeautifulSoup(req, 'html.parser')
-# calories = scrap.find("div", class_="label-1frn-").text
-# print(calories)
+# text = scrap.find("div", class_="smallText greyText greyLink").text
+# arr = text.split(" ")
+# i = search(arr,"Calories:")
+# print(arr[i+1])
