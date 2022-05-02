@@ -52,4 +52,4 @@ def create_labels():
         generate_bbox_file(i)
     print('Completed')
 
-create_labels()
+# create_labels()
