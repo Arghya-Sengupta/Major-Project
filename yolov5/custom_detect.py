@@ -182,10 +182,10 @@ def run(
                         # label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
                         
                         calories = web_scraper.fetch_calories(names[c])
-                        total_calories += int(calories)
+                        total_calories += int(calories[:-4])
                         foods_found.append(names[c])
 
-                        label = f'{names[c]} {str(calories)+" kcal"}'
+                        label = (f'{names[c]} {calories}')
 
                         annotator.box_label(xyxy, label, color=colors(c, True))
                         if save_crop:
@@ -223,12 +223,12 @@ def run(
 
                     img = Image.open(save_path)
                     I1 = ImageDraw.Draw(img)
-                    myFont = ImageFont.truetype(r'D:/Project/arial.ttf',40)
+                    myFont = ImageFont.truetype(r'D:/Project/arial.ttf',25)
                     # Add Text to an image
-                    total_calories = str(total_calories) + " kcal"
+                    total_calories = str(total_calories) + "kcal"
                     I1.text((0, 0), total_calories, font=myFont, fill =(255, 0, 0))
                     if(save_result):
-                        img.save("D:/Project/Result/result.jpg") # results_path
+                        img.save("D:/Project/Results/result.jpg") # results_path
 
                 else:  # 'video' or 'stream'
                     if vid_path[i] != save_path:  # new video
