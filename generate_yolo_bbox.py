@@ -50,6 +50,6 @@ def create_labels():
     for i in range(1,nc+1):
         print("Working on "+str(i))
         generate_bbox_file(i)
-    print('Completed')
+    print('Completed\n\n')
 
 # create_labels()
