@@ -10,7 +10,7 @@ root = Tk()
 #root.geometry("675x500+120+120")
 #root.minsize(675,395)
 #root.maxsize(675,395)
-canvas=Canvas(root,width=1000,height=1000)
+canvas=Canvas(root,width=700,height=700)
 canvas.pack()
 root.title("CALORIE FINDER")
 
@@ -29,18 +29,18 @@ def show_result():
 	im.show()
 	pass
 
-b1=Button(root,text=" CREATE\nYOLO LABELS ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",pady=5,padx=5,relief=RAISED,bg="black",command=lambda:[create_labels()])
+b1=Button(root,text=" CREATE\nYOLO LABELS ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=25,pady=18,relief=RAISED,bg="black",command=lambda:[create_labels()])
 b1_placing=canvas.create_window(222,120,window=b1)
 
-b2=Button(root,text=" CREATE\nTRAINING IMAGES ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=26,pady=18,relief=RAISED,bg="black",command=lambda:[split_files(70)])
-b2_placing=canvas.create_window(450,120,window=b2)
+b2=Button(root,text=" CREATE\nTRAINING IMAGES ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=10,pady=18,relief=RAISED,bg="black",command=lambda:[split_files(70)])
+b2_placing=canvas.create_window(222,240,window=b2)
 
-b3=Button(root,text=" TRAIN ",font=("BankGothic Md BT",12,"bold"),fg="yellow",pady=20,padx=4,relief=RAISED,bg="black",command=lambda:[train()])
-b3_placing=canvas.create_window(452,250,window=b3)
+b3=Button(root,text=" TRAIN ",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=55,pady=28,relief=RAISED,bg="black",command=lambda:[train()])
+b3_placing=canvas.create_window(222,360,window=b3)
 
 file_name = "D:/Project/test.jpg"
-b4=Button(root,text=" DETECT ",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=31,pady=3,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
-b4_placing=canvas.create_window(220,250,window=b4)
+b4=Button(root,text=" DETECT ",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=47,pady=28,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
+b4_placing=canvas.create_window(222,480,window=b4)
 
 if __name__ == '__main__':
     root.mainloop()
