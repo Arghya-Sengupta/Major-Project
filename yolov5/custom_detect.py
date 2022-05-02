@@ -223,7 +223,7 @@ def run(
 
                     img = Image.open(save_path)
                     I1 = ImageDraw.Draw(img)
-                    myFont = ImageFont.truetype(r'D:/Project/arial.ttf',25)
+                    myFont = ImageFont.truetype(r'D:/Project/yolov5/arial.ttf',25)
                     # Add Text to an image
                     total_calories = str(total_calories) + "kcal"
                     I1.text((0, 0), total_calories, font=myFont, fill =(255, 0, 0))
