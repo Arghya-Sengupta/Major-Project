@@ -46,4 +46,4 @@ def split_files(probability):
 	print(str(t) + " (" + str(100.0*t/(t+v)) + " %) Images for training")
 	print(str(v) + " (" + str(100.0*v/(t+v)) + " %) Images for validation")
 
-split_files(70) # 70% for training and 30% for validation
+# split_files(70) # 70% for training and 30% for validation
