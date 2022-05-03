@@ -1,4 +1,4 @@
-# Estimating Food Calories for Multiple-dish Food Photos using YOLOv5
+# Food Item Detection and Calorie Estimation using YOLOv5
 YOLO (You Only Look Once) is an object detection algorithm that divides images into a grid system. Each cell in the grid is responsible for detecting objects within itself. YOLO is one of the most famous object detection algorithms due to its speed and accuracy. [Glenn Jocher](https://www.linkedin.com/in/glenn-jocher) introduced YOLOv5 using the Pytorch framework. We have referred to the [YOLOv5 documentation](https://docs.ultralytics.com) for training and testing. Other resources can be found below:-
 
 - [Google Colab](https://colab.research.google.com/github/Arghya-Sengupta/Project/blob/main/YOLOv5.ipynb#scrollTo=HqHDViXe4u6s)
