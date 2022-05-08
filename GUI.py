@@ -29,21 +29,21 @@ def show_result():
 	im.show()
 	pass
 
-b1=Button(root,text=" CREATE\nYOLO LABELS ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=25,pady=18,relief=RAISED,bg="black",command=lambda:[create_labels()])
+b1=Button(root,text="CREATE\nYOLO LABELS",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=25,pady=18,relief=RAISED,bg="black",command=lambda:[create_labels()])
 b1_placing=canvas.create_window(222,120,window=b1)
 
-b2=Button(root,text=" CREATE\nTRAINING IMAGES ",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=10,pady=18,relief=RAISED,bg="black",command=lambda:[split_files(70)])
+b2=Button(root,text="CREATE\nTRAINING IMAGES",font=("BankGothic Md BT",12,"bold"),fg="aquamarine",padx=10,pady=18,relief=RAISED,bg="black",command=lambda:[split_files(70)])
 b2_placing=canvas.create_window(222,240,window=b2)
 
-b3=Button(root,text=" TRAIN ",font=("BankGothic Md BT",12,"bold"),fg="red",padx=55,pady=28,relief=RAISED,bg="black",command=lambda:[train()])
+b3=Button(root,text="TRAIN",font=("BankGothic Md BT",12,"bold"),fg="red",padx=57,pady=28,relief=RAISED,bg="black",command=lambda:[train()])
 b3_placing=canvas.create_window(222,360,window=b3)
 
 file_name = "D:/Project/test.jpg"
 
-b4=Button(root,text=" DETECT\nFROM IMAGE",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=33,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
+b4=Button(root,text="DETECT\nFROM IMAGE",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=30,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
 b4_placing=canvas.create_window(222,480,window=b4)
 
-b5=Button(root,text=" DETECT\nFROM CAMERA",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=22,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name,0), show_result()])
+b5=Button(root,text="DETECT\nFROM CAMERA",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=21,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name,0), show_result()])
 b5_placing=canvas.create_window(222,600,window=b5)
 
 if __name__ == '__main__':
