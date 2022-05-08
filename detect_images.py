@@ -1,5 +1,3 @@
-# detect 75 images
-
 import os
 import time
 
@@ -10,12 +8,12 @@ weight_file = path + "/yolov5/runs/train/exp/weights/best.pt"
 # N = len(os.listdir(images_path))
 start = time.time()
 
-def detect_file(file_name):	# file_name --> D:/Project/Testing_Images/Test_0.jpg
+def detect_file(file_name, weight=weight_file):	# file_name --> D:/Project/Testing_Images/Test_0.jpg
 	if not os.path.exists(results_path):
 		os.mkdir(results_path)
 
 	prog_path = path + "/yolov5/custom_detect.py"
-	command = "python " + prog_path + " --weights " + weight_file + " --conf 0.3 --source " + file_name
+	command = "python " + prog_path + " --weights " + weight + " --conf 0.3 --source " + file_name
 	print("Detecting",file_name)
 
 	try:
