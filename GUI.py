@@ -43,8 +43,8 @@ file_name = "D:/Project/test.jpg"
 b4=Button(root,text="DETECT\nFROM IMAGE",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=30,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
 b4_placing=canvas.create_window(222,480,window=b4)
 
-b5=Button(root,text="DETECT\nFROM CAMERA",font=("BankGothic Md BT",12,"bold"),fg="yellow",padx=21,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name,0), show_result()])
-b5_placing=canvas.create_window(222,600,window=b5)
+#b5=Button(root,text="DETECT\nFROM CAMERA",font=("BankGothic Md #BT",12,"bold"),fg="yellow",padx=21,pady=18,relief=RAISED,bg="black",command=lambda:[detect_file(file_name), show_result()])
+#b5_placing=canvas.create_window(222,600,window=b5)
 
 if __name__ == '__main__':
     root.mainloop()
