@@ -1,4 +1,3 @@
-# fetch food calorie from https://www.myfitnesspal.com/food/search
 # fetch food calorie from https://www.fatsecret.com/calories-nutrition/search?q=
 
 import requests
