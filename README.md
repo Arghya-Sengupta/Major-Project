@@ -5,6 +5,8 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
 
 - [Original Dataset](http://foodcam.mobi/dataset100.html)
 
+- [Project Documentation](https://drive.google.com/file/d/1ecb3buVpqab_AudhyEdYZSaHI1hZfJ81/view?usp=sharing)
+
 - [Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
 
 - **Steps to execute the code:**
