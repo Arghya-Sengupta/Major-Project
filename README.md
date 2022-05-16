@@ -7,8 +7,6 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
 
 - [Reference Research Paper](https://drive.google.com/file/d/1jsvMc41_EPGKejEG-NMBzA6Ll6HqRhKa/view?usp=sharing)
 
-- [Google Sheet](https://docs.google.com/spreadsheets/d/1_HPeNQ58W921psJhpR_WhonspteSroTeWoLdOJyyVaw/edit?usp=sharing) for Training Accuracy
-
 - **Steps to execute the code:**
    > Open cmd and run the bellow commands:
    > ```
