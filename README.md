@@ -25,5 +25,13 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
    > ```
    > Download the _`Original_Images`_ folder from [Google Drive](https://drive.google.com/drive/folders/169tjqFIs-gr1Ru6LXnuhInvYFi0Zhj4M?usp=sharing "Google Drive").
 
+- **For detecting using camera:**
+   > Open cmd and run the bellow commands:
+   > ```
+   > d:
+   > python D:/Project/yolov5/custom_detect.py --weights D:/Project/yolov5/runs/train/exp/weights/best.pt --conf 0.3 --source 0
+   > 
+   > ```
+
 ## Flowchart
 ![Flowchart](https://github.com/Arghya-Sengupta/Major-Project/blob/main/Flowchart.png "Flowchart")
