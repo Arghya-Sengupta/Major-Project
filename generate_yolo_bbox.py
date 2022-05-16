@@ -3,7 +3,6 @@
 import os
 from PIL import Image
 
-# modify the directories accordingly
 datapath = 'D:/Project/Original_Images'
 labelpath = 'D:/Project/Original_Images/labels/'
 nc = 5
