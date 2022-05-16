@@ -6,9 +6,9 @@ images_path = path +  "Testing_Images/"
 results_path = path + "Results/"
 weight_file = path + "/yolov5/runs/train/exp/weights/best.pt"
 # N = len(os.listdir(images_path))
-start = time.time()
+# start = time.time()
 
-def detect_file(file_name):	# file_name --> D:/Project/Testing_Images/Test_0.jpg
+def detect_file(file_name):
 	if not os.path.exists(results_path):
 		os.mkdir(results_path)
 
