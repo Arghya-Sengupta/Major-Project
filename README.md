@@ -13,7 +13,7 @@ YOLO (You Only Look Once) is an object detection algorithm that divides images i
    > Open cmd and run the bellow commands:
    > ```
    > d:
-   > git clone https://github.com/Arghya-Sengupta/Project
+   > git clone https://github.com/Arghya-Sengupta/Major-Project
    > cd Project
    > cd yolov5
    > git init
